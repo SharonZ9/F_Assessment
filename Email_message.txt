@@ -1,0 +1,64 @@
+Hi product/businss leader,
+
+I hope this message finds you well! I wanted to share some updates and observations regarding our recent analysis of user, receipt, and brand data. 
+ Below, I’ve outlined the key points:
+
+1. Key Observations:
+
+Data Quality Issues Identified:
+
+- Missing Data: Some records have null or missing fields, such as missing CreatedDate in the user data or Barcode in the receipt items. These gaps make it harder to build accurate reports.
+
+- Duplicate Entries: Duplicate receipts and brands were identified, which could skew metrics like total spend or brand popularity.
+
+- Inconsistent Formats: Date fields are stored in mixed formats (e.g., timestamps vs. strings), leading to parsing errors and delays during data processing.
+
+- Out-of-Range Values: Some receipts show unrealistic values, such as negative spend or quantities purchased exceeding plausible limits.
+
+2. How We Discovered These Issues:
+
+By conducting exploratory data analysis using Python, we inspected the structure and contents of the datasets. Techniques included checking for null values, duplicate rows, and invalid entries in numerical and date fields.
+
+3. Questions to Address and What We Need to Resolve These Issues
+
+
+- Clear guidelines on what constitutes valid data for key metrics (e.g., minimum and maximum spend values).
+
+- Confirmation on how to handle incomplete or erroneous data. Should it be corrected, flagged, or removed?
+
+- Are there specific KPIs or business questions this data supports, such as lifetime customer value or brand-specific engagement?
+
+
+
+4. Optimize the data assets 
+
+- Will this data be integrated with other datasets (e.g., marketing or sales)? If so, alignment on data structure and schema will be critical.
+
+5. Operformance and scaling concerns 
+
+In production, we anticipate:
+
+- Large Data Volumes: As data grows, query performance may degrade, particularly for complex joins or aggregations.
+
+- Scaling for Insights: Running computations like top-brand analysis across millions of records could strain resources.
+
+Plan:
+
+- Leverage indexing and partitioning in the database for faster queries.
+
+- Pre-aggregate commonly used metrics to reduce computational overhead.
+
+- Use scalable cloud-based infrastructure, such as Snowflake, to handle increasing data loads efficiently.
+
+6. Next Steps:
+
+Review the identified data quality issues and provide any feedback or additional context.
+
+Collaborate with key stakeholders to define validation rules and priorities for data cleanup.
+
+Align on the business objectives to optimize the data structure and assets accordingly.
+
+Looking forward to your thoughts and input!
+
+Thanks,
+Sharon
